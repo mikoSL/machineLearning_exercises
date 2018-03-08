@@ -1,6 +1,6 @@
 # Machine Learning learning exercises from the book "Hands-on Machine Learning with Scikit Learn and Tensorflow" by Aurelien Geron. 
 ---
-## Chapter 1 Essentials: workflow of machine learning project
+## Chapter 2 Essentials: workflow of machine learning project
 ### 1. Glance data
 * data structure
 * data information
