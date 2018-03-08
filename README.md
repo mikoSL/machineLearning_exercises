@@ -33,7 +33,7 @@
 * e.g. check the importance of each attribute
 
 ### 8. Evaluate on test set
-## (NOT tweak hyperparameter to make the number look good on test set! The improvement is unlikely to generalize to new new data.)
+## (NOT tweak hyperparameter to make the number look good on test set! The improvement is unlikely to generalize to new data.)
 
 ### 9. Launch project
 * plug production input dat to system
