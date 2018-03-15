@@ -44,3 +44,20 @@
 * evaluate input data quality
 * human evaluation pipeline
 * automated regular model train with new data
+
+## Chapter 3 Essentials: classification
+### 1. Classifier
+* Binary Classifier (SVM support vector machine, or linear classifier)
+* Multiclass Classifier (random forest classifier, naive bayes classifier)
+## (which strategy? OvA- one versus all or OvO - one versus one)
+* Multilabel Classifier
+## (When labels are not equally important, choose "weight" method in f1_score.)
+* Multioutput Classifier
+
+### 2. Performance Evaluation
+* cross validation
+## (NOT suitable for skewed data!)
+* confusion matrix 
+## (precision/recall tradeoff!)
+* ROC-AUC curve (Receiver Operating Characteristic) (Area Under the Curve)
+## (PR(precision Recall curve) or ROC curve, which one? Choose PR when positive case is rare and you care more about the false positives than the false negatives)
