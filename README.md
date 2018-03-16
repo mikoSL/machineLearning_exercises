@@ -1,5 +1,5 @@
 # Learning diary from the book "Hands-on Machine Learning with Scikit Learn and Tensorflow" by Aurelien Geron. 
-This long text is keypoint collection for self-learning purpose.
+# This long text is keypoint collection for self-learning purpose.
 ---
 ## Chapter 2 Essentials: workflow of machine learning project
 ### 1. Glance data
