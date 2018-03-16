@@ -64,59 +64,59 @@
 
 ## Chapter 4 Essentials: regression, optimal algorithem and regularization)
 ### 1. Gradient Descent (GD)
-*. random initialization
-*. iterate to decrease cost function (different learning rate)
-*. converage to minima (local minima or global minima)
+* random initialization
+* iterate to decrease cost function (different learning rate)
+* converage to minima (local minima or global minima)
 ## (GD used for linear regression is convex function--no local minima, one global minimal and continuous function--slope never change abruptly)
 
 #### 1.1. Batch Gradient Descent (BGD)
-*. run on full train set!
-*. Q: How many iteration should be used? A: Set very large number of iteration, interrupt the algorithem when gradient vector becomes tiny--tolerance)
-*. convergence rate. when cost function is convex and slope rate not change abruptly, convergence rate of BGD with a fixed learn rate is O(1/iteration), meaning that if divide tolerance by 10, iterate will be 10 times (10*iteration)
+* run on full train set!
+* Q: How many iteration should be used? A: Set very large number of iteration, interrupt the algorithem when gradient vector becomes tiny--tolerance)
+* convergence rate. when cost function is convex and slope rate not change abruptly, convergence rate of BGD with a fixed learn rate is O(1/iteration), meaning that if divide tolerance by 10, iterate will be 10 times (10*iteration)
 
 #### 1.2. Stochastic Gradient Descent (SGD)
-*. run on a random pick-up instance.
-*. better to find global minima.
-*. never settle at minimum because instance is random selected. 
+* run on a random pick-up instance.
+* better to find global minima.
+* never settle at minimum because instance is random selected. 
 ## (solution: simulated annealing--gradually reduce learning rate)
-*. learning schedule: function to determine what is the learning rate.
-*. epoch (one round of m iteration)
+* learning schedule: function to determine what is the learning rate.
+* epoch (one round of m iteration)
 
 #### 1.3. Mini-batch Gradient Descent (MBGD)
-*. run on small random sets of instance.
-*. + performance boost from hardware optimization of matrix operation, especailly when using GPUs.
-*. + closer to minimum than SGD.
-*. - harder to escape from local minima.
+* run on small random sets of instance.
+* + performance boost from hardware optimization of matrix operation, especailly when using GPUs.
+* + closer to minimum than SGD.
+* - harder to escape from local minima.
 
 ### 2. Polynomial regression
-*. in sklearn, PolynomialFeature (degree = d) transform array contain n feature to (n+d)!/d!n!
-*. capable of finding relationship between features.
-*. learning curves. underfit--not hlep to feed more training data. overfit--feed it more train data until the validation error reaches the training error.
+* in sklearn, PolynomialFeature (degree = d) transform array contain n feature to (n+d)!/d!n!
+* capable of finding relationship between features.
+* learning curves. underfit--not hlep to feed more training data. overfit--feed it more train data until the validation error reaches the training error.
 ## (bias/variance tradeoff! Bias--Underfit! Variance--Overfit!)
-*. bias: wrong assumption, assume it is linear but it is quadratic. A high bias model is most likely to UNDERFIT train data.
-*. variance: model's excessive sensitivity to small variaion in training data. A model with many degrees of freedom is likely to have high variance. It normally causes OVERFIT.
-*. irreducible error (caused by noise in data)
+* bias: wrong assumption, assume it is linear but it is quadratic. A high bias model is most likely to UNDERFIT train data.
+* variance: model's excessive sensitivity to small variaion in training data. A model with many degrees of freedom is likely to have high variance. It normally causes OVERFIT.
+* irreducible error (caused by noise in data)
 
 ### 3. Regularize linear model
-*. One way to regularize polynomial regress is to reduce degree.
+* One way to regularize polynomial regress is to reduce degree.
 ## (For linear model, regularization is done by constrain weights of model!)
-*. ridge regression (L2 norm of the weight vector)
+* ridge regression (L2 norm of the weight vector)
 ## (scale data when apply ridge regression! add it during train, but evaluate the model performance using unregularized performance measure!)
-*. lasso regression (tent to completely eliminate weight of the least important feature)
+* lasso regression (tent to completely eliminate weight of the least important feature)
 ## (automatically perform feature selection and outputs a sparse model! Behave erratically when number of feature is greater than number of train instance or when several feature are strongly correlated!)
-*. Elastic Net(perfered over lasso)
+* Elastic Net(perfered over lasso)
 
 ### 4. Early stop
 * One way to regularize iteration learning algorithem (eg. GD) is to stop train as soon as the validation error reaches a minimum.
 
 ### 5. Logistic regression (caculate probability that one instant belong to a particular class)
-*. sigmoid function.
-*. log loss
+* sigmoid function.
+* log loss
 ## (cost function--log loss is convex , meaning it has one global minima)
 
 ### 6. Softmax regression (multinomial logistic regression)
-*. multiclass not multioutput, meaning it can not recognize multiple people in one picture, only can mutually exclusive classes such as different plant)
-*. normalized exponential (prob softmax function--compute score for each class k)
-*. argmax
-*. cross entropy (min cost function): measure how well a set of estimated class prob match the target classes.
+* multiclass not multioutput, meaning it can not recognize multiple people in one picture, only can mutually exclusive classes such as different plant)
+* normalized exponential (prob softmax function--compute score for each class k)
+* argmax
+* cross entropy (min cost function): measure how well a set of estimated class prob match the target classes.
 
